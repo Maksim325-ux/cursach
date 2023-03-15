@@ -17,7 +17,8 @@ def get_last_data(data):
     return data [:5]
 
 def get_format_time(data):
-    data = datetime.strptime(data['date'], '%Y-%m-%d').strftime('%d.%m.%Y')
+    for i in data:
+        data = datetime.strptime(data['date'], '%Y-%m-%d').strftime('%d.%m.%Y')
     return data
 
 

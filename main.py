@@ -1,11 +1,13 @@
 import os
-from utils.utils import data_file, get_filtered_operation
+from utils.utils import get_data_file, get_filtered_operation, get_last_data
 
 OPERATIONS_PATH = os.path.join('operations.json')
 
-user_operation = data_file(OPERATIONS_PATH)
-operation_execut = get_filtered_operation(user_operation)
+data = get_data_file(OPERATIONS_PATH)
+data = get_filtered_operation(data)
+data = get_last_data(data)
 
-print(operation_execut)
+
+print(len(data))
 
 

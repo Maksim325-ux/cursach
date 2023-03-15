@@ -8,6 +8,6 @@ data = get_filtered_operation(data)
 data = get_last_data(data)
 
 
-print(len(data))
+print(data)
 
 

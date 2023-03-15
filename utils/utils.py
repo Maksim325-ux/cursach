@@ -16,7 +16,9 @@ def get_last_data(data):
     data = sorted(data, key=lambda item: item['date'], reverse=True)
     return data [:5]
 
-
+def get_format_time(data):
+    data = datetime.strptime(data['date'], '%Y-%m-%d').strftime('%d.%m.%Y')
+    return data
 
 
 

@@ -16,10 +16,9 @@ def get_last_data(data):
     data = sorted(data, key=lambda item: item['date'], reverse=True)
     return data [:5]
 
-def get_format_time(data):
-    for i in data:
-        data = datetime.strptime(data['date'], '%Y-%m-%d').strftime('%d.%m.%Y')
-    return data
+def get_format_time(old_data):
+    form_data = datetime.strptime(old_data, '%Y-%m-%dT%H:%M:%S.%f').strftime('%d.%m.%Y')
+    return form_data
 
 
 
